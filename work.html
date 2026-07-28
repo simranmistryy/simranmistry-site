@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Work — Simran Mistry</title>
+<link rel="stylesheet" href="styles.css">
+<script src="reveal.js"></script>
+<script>window.addEventListener('unhandledrejection', function (e) { var m = String((e.reason && e.reason.message) || e.reason || ''); if (m.indexOf('skipped') !== -1) e.preventDefault(); });</script>
+<style>
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-fade-out 0.35s ease both; }
+::view-transition-new(root) { animation: vt-fade-in 0.35s ease both; }
+@keyframes vt-fade-out { to { opacity: 0 } }
+@keyframes vt-fade-in { from { opacity: 0 } }
+@keyframes page-enter { from { opacity: 0 } }
+body { animation: page-enter 0.4s ease both; }
+html{scroll-behavior:smooth}</style>
+</helmet>
+
+<div style="background: var(--gradient-ground); color: var(--burgundy); min-height: 100vh">
+
+  <a href="index.html" aria-label="Home" style="position: fixed; top: 18px; left: 24px; z-index: 60; width: 52px; height: 52px; display: block; text-decoration: none; filter: drop-shadow(0 10px 24px rgba(110,20,35,0.3))"><span style="{{ badgeGlassStyle }}"><span style="position: absolute; inset: 0; clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); -webkit-clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); background: linear-gradient(155deg, rgba(255,255,255,0.85) 0%, rgba(255,250,250,0.3) 40%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.6) 100%); backdrop-filter: blur(36px) saturate(2.2); -webkit-backdrop-filter: blur(36px) saturate(2.2)"></span><svg viewBox="0 0 52 52" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none"><path d="M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"></path><path d="M9,13 C11,8.5 14,6 17.5,5.5" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linecap="round"></path></svg></span><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 10px; box-sizing: border-box; font-family: var(--font-script); font-size: 19px; line-height: 1; color: var(--burgundy)">SM</span></a>
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 18px 0; pointer-events: none">
+  <nav style="{{ navPillStyle }}">
+    <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Work</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="content.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Content</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Portfolio</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Shop</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Contact</a>
+  </nav>
+</div>
+
+  <!-- WORK INDEX -->
+  <section data-screen-label="Work index" style="max-width: var(--page-max); margin: 0 auto; padding: 160px var(--page-gutter) 56px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h1 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h1); line-height: 1; color: var(--burgundy); margin: 0">Work</h1>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Product management, shipped</span>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section data-screen-label="Work numbers" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 120px; box-sizing: border-box">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px">
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(255,255,255,0.3); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Enterprise Features Shipped</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">50+</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(255,255,255,0.3); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Traveler Workflows Automated</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">85%</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(255,255,255,0.3); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Client Savings Unlocked</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">$3.2M</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(255,255,255,0.3); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Engineers Led</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">23</div>
+      </div>
+    </div>
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 32px">Spotnana &nbsp;·&nbsp; Fortune 500 clients &nbsp;·&nbsp; [airline partners]</div>
+  </section>
+
+  <!-- WORK INDEX PROJECTS -->
+  <section data-screen-label="Work index projects" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px">
+      <a href="#case-study" style="text-decoration: none; display: block">
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="workpage-aviation" shape="rect" placeholder="Product shot — Spotnana aviation" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 24px; font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1; color: rgba(255,250,250,0.75); pointer-events: none">2023–Present</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">Aviation Travel at Spotnana</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">End-to-end product ownership for a Series C travel-tech platform</div>
+      </a>
+      <a href="#case-study" style="text-decoration: none; display: block">
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="workpage-credits" shape="rect" placeholder="Product shot — credit reassignment" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 24px; font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1; color: rgba(255,250,250,0.75); pointer-events: none">2024</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">Company Credits: Zero to One</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">The industry's first self-serve credit reassignment feature</div>
+      </a>
+      <a href="#case-study" style="text-decoration: none; display: block">
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="workpage-ndc" shape="rect" placeholder="Diagram — NDC onboarding" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 24px; font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1; color: rgba(255,250,250,0.75); pointer-events: none">2024</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">NDC Partner Onboarding Playbook</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">Cut airline integration time 80% through standardized systems</div>
+      </a>
+      <a href="#case-study" style="text-decoration: none; display: block">
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="workpage-content" shape="rect" src="assets/imagery/soho-denim.jpeg" placeholder="Creator portfolio image" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 24px; font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1; color: rgba(255,250,250,0.75); pointer-events: none">Ongoing</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">Content Creation Portfolio</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">Documenting growth, style, and city life across Instagram, TikTok, and Substack</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CASE STUDY DETAIL TEMPLATE -->
+  <section id="case-study" data-screen-label="Case study template" style="border-top: 1px solid var(--hairline); background: var(--gradient-panel)">
+    <div style="max-width: 880px; margin: 0 auto; padding: 144px var(--page-gutter) 160px; box-sizing: border-box">
+      <div style="display: flex; gap: 40px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose)">
+        <span>Spotnana</span>
+        <span>2024</span>
+      </div>
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h1); line-height: 1.05; color: var(--burgundy); margin: 32px 0 0; text-wrap: pretty">Company Credits: Zero to One</h2>
+
+      <div style="display: grid; grid-template-columns: 180px 1fr; column-gap: 48px; row-gap: 0; margin-top: 96px; border-top: 1px solid var(--hairline)">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); padding: 32px 0">Context</div>
+        <p style="font-family: var(--font-sans); font-size: var(--body-size); line-height: var(--body-leading); color: var(--burgundy); max-width: 52ch; margin: 0; padding: 32px 0; border-bottom: 1px solid var(--hairline); text-wrap: pretty">Unused airline credits sat stranded on individual traveler profiles — invisible to travel managers and written off at scale across enterprise accounts.</p>
+        
+
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); padding: 32px 0">Problem</div>
+        <p style="font-family: var(--font-sans); font-size: var(--body-size); line-height: var(--body-leading); color: var(--burgundy); max-width: 52ch; margin: 0; padding: 32px 0; border-bottom: 1px solid var(--hairline); text-wrap: pretty">No airline or TMC offered self-serve reassignment. Every transfer was a support ticket, a phone call, and days of waiting.</p>
+        
+
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); padding: 32px 0">Team</div>
+        <p style="font-family: var(--font-sans); font-size: var(--body-size); line-height: var(--body-leading); color: var(--burgundy); max-width: 52ch; margin: 0; padding: 32px 0; border-bottom: 1px solid var(--hairline); text-wrap: pretty">1 PM, 8 engineers, 2 designers — shipped in two quarters.</p>
+        
+
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); padding: 40px 0">Outcome</div>
+        <div style="padding: 40px 0; border-bottom: 1px solid var(--hairline)">
+          <div style="font-family: var(--font-display); font-weight: 500; font-size: 128px; line-height: 0.95; color: var(--rose)">$3.2M</div>
+          <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 24px">Client savings unlocked in year one</div>
+        </div>
+        
+      </div>
+
+      <div style="position: relative; aspect-ratio: 16 / 9; background: var(--blush-100); border-radius: 24px; overflow: hidden; margin-top: 96px; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="case-study-detail" shape="rect" placeholder="Product shot — credit reassignment flow" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--hairline); padding: 48px 0 64px">
+    <div style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter); box-sizing: border-box; display: flex; justify-content: space-between; align-items: baseline; gap: 32px; flex-wrap: wrap">
+      <a href="index.html" style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 24px; color: var(--burgundy); text-decoration: none">Simran Mistry</a>
+      <div style="display: flex; gap: 40px">
+        <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Work</a>
+        <a href="index.html#content" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Content</a>
+        <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Shop</a>
+        <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Contact</a>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">© 2026 Simran Mistry</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { scrolled: false };
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 60;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  renderVals() {
+    const scrolled = this.state.scrolled;
+    const glass = 'blur(36px) saturate(2)';
+    return {
+      navPillStyle: {
+        display: 'flex', gap: '20px', alignItems: 'center',
+        padding: '16px 36px', borderRadius: '999px', pointerEvents: 'auto',
+        transition: 'background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease',
+        border: '1px solid ' + (scrolled ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0)'),
+        background: scrolled ? 'rgba(255,250,250,0.6)' : 'rgba(255,250,250,0)',
+        backdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        WebkitBackdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        boxShadow: scrolled ? '0 16px 48px rgba(110,20,35,0.18), inset 0 1px 0 rgba(255,255,255,0.9)' : 'none',
+      },
+      badgeGlassStyle: {
+        position: 'absolute', inset: 0, display: 'block',
+        transition: 'opacity 0.5s ease',
+        opacity: scrolled ? 1 : 0,
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

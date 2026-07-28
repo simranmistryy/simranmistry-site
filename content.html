@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Content — Simran Mistry</title>
+<link rel="stylesheet" href="styles.css">
+<script src="reveal.js"></script>
+<script>window.addEventListener('unhandledrejection', function (e) { var m = String((e.reason && e.reason.message) || e.reason || ''); if (m.indexOf('skipped') !== -1) e.preventDefault(); });</script>
+<style>
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-fade-out 0.35s ease both; }
+::view-transition-new(root) { animation: vt-fade-in 0.35s ease both; }
+@keyframes vt-fade-out { to { opacity: 0 } }
+@keyframes vt-fade-in { from { opacity: 0 } }
+@keyframes page-enter { from { opacity: 0 } }
+body { animation: page-enter 0.4s ease both; }
+
+html{scroll-behavior:smooth}
+@keyframes blob-a{50%{transform:translate(10vw,14vh) scale(1.18)}}
+@keyframes blob-b{50%{transform:translate(-12vw,-8vh) scale(1.22)}}
+@keyframes blob-c{50%{transform:translate(9vw,-12vh) scale(0.88)}}
+</style>
+</helmet>
+
+<div style="background: var(--gradient-ground); color: var(--burgundy); min-height: 100vh; position: relative; overflow-x: clip">
+
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none">
+    <div style="position: absolute; width: 80vw; height: 80vw; top: -28vw; left: -20vw; border-radius: 50%; background: radial-gradient(circle, #eeaebc 0%, rgba(238,174,188,0) 65%); filter: blur(60px); animation: blob-a 26s ease-in-out infinite"></div>
+    <div style="position: absolute; width: 74vw; height: 74vw; top: 24vh; right: -26vw; border-radius: 50%; background: radial-gradient(circle, #f6ccd6 0%, rgba(246,204,214,0) 65%); filter: blur(70px); animation: blob-b 34s ease-in-out infinite"></div>
+    <div style="position: absolute; width: 66vw; height: 66vw; bottom: -24vw; left: 6vw; border-radius: 50%; background: radial-gradient(circle, #e79aab 0%, rgba(231,154,171,0) 65%); filter: blur(80px); animation: blob-c 22s ease-in-out infinite"></div>
+  </div>
+
+  <a href="index.html" aria-label="Home" style="position: fixed; top: 18px; left: 24px; z-index: 60; width: 52px; height: 52px; display: block; text-decoration: none; filter: drop-shadow(0 10px 24px rgba(110,20,35,0.3))"><span style="{{ badgeGlassStyle }}"><span style="position: absolute; inset: 0; clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); -webkit-clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); background: linear-gradient(155deg, rgba(255,255,255,0.85) 0%, rgba(255,250,250,0.3) 40%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.6) 100%); backdrop-filter: blur(36px) saturate(2.2); -webkit-backdrop-filter: blur(36px) saturate(2.2)"></span><svg viewBox="0 0 52 52" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none"><path d="M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"></path><path d="M9,13 C11,8.5 14,6 17.5,5.5" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linecap="round"></path></svg></span><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 10px; box-sizing: border-box; font-family: var(--font-script); font-size: 19px; line-height: 1; color: var(--burgundy)">SM</span></a>
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 18px 0; pointer-events: none">
+  <nav style="{{ navPillStyle }}">
+    <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Work</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="content.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Content</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Portfolio</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Shop</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Contact</a>
+  </nav>
+</div>
+
+  <div style="position: relative; z-index: 1">
+
+  <!-- 1 · COVER / INTRO -->
+  <section data-screen-label="Media kit intro" style="max-width: var(--page-max); margin: 0 auto; padding: 160px var(--page-gutter) 96px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h1 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h1); line-height: 1; color: var(--burgundy); margin: 0">Content</h1>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Fashion, beauty &amp; NYC lifestyle creator</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; margin-top: 72px; align-items: start">
+      <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-hero" shape="rect" placeholder="Hero photo — 3:4" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">IG · 2,845</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">TikTok · 349</span>
+        </div>
+        <p style="font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.5; color: var(--burgundy); margin: 36px 0 0; text-wrap: pretty">A New York–based lifestyle creator sharing fashion, beauty, travel, and "older sister" advice for women in their twenties navigating career, independence, and identity — editorial aesthetics with warm, relatable storytelling.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 36px">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 7px 14px 6px; line-height: 1">Fashion</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 7px 14px 6px; line-height: 1">Beauty</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 7px 14px 6px; line-height: 1">NYC Lifestyle</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 7px 14px 6px; line-height: 1">Travel</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 7px 14px 6px; line-height: 1">Advice</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 24px; margin-top: 40px">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">@simran_mistry_ · @thesimranmistry</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">team.simranmistry@gmail.com</span>
+        </div>
+        <div style="font-family: var(--font-script); font-size: 32px; color: var(--rose); margin-top: 28px">SM ♡</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1b · POST CAROUSEL -->
+  <section data-screen-label="Post carousel" style="padding: 0 0 120px; overflow: hidden">
+    <div ref="{{ carouselRef }}" style="overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; cursor: grab">
+    <div style="display: flex; gap: 14px; width: max-content; padding: 32px 64px">
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-1" shape="rect" placeholder="Post 1" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-2" shape="rect" placeholder="Post 2" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-3" shape="rect" placeholder="Post 3" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-4" shape="rect" placeholder="Post 4" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-5" shape="rect" placeholder="Post 5" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-6" shape="rect" placeholder="Post 6" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-7" shape="rect" placeholder="Post 7" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-8" shape="rect" placeholder="Post 8" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-9" shape="rect" placeholder="Post 9" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-10" shape="rect" placeholder="Post 10" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-11" shape="rect" placeholder="Post 11" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position: relative; width: 118px; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(110,20,35,0.1); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; flex-shrink: 0; margin-top: 14px" style-hover="transform: scale(1.18); box-shadow: 0 28px 64px rgba(110,20,35,0.22); z-index: 5">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="carousel-post-12" shape="rect" placeholder="Post 12" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- 2 · BY THE NUMBERS -->
+  <section data-screen-label="Numbers" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">By the Numbers</h2>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Updated July 2026</span>
+    </div>
+    <div style="display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; background: var(--burgundy-900); border-radius: 24px; padding: 48px 56px; margin-top: 56px; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease" style-hover="transform: scale(1.02); box-shadow: 0 30px 70px rgba(110,20,35,0.3)">
+      <div style="font-family: var(--font-display); font-weight: 400; font-size: 88px; line-height: 1; color: var(--blush-100)">171K</div>
+      <div style="font-family: var(--font-mono); font-size: 13px; line-height: 2; color: var(--rose-faint)">VIEWS ON A SINGLE POST — 60× HER FOLLOWER COUNT<br>94.7% of reach from non-followers · 735 saves · 416 shares · 101 comments<br>3,488 profile visits driven from one piece of content</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px">
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Engagement Rate (IG / TikTok)</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px"><span data-stat="er_ig">3.9%</span>–<span data-stat="er_tt">5.6%</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); color: var(--text-muted); margin-top: 16px">vs. 3–5% industry avg</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">TikTok FYP Discovery</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">72.7%</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); color: var(--text-muted); margin-top: 16px">Algorithm-driven reach</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 32px 40px">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Non-Follower Reach</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 28px">94.7%</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); color: var(--text-muted); margin-top: 16px">On viral content</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px">
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)"><span data-stat="ig_views_30d">28.4K</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">IG views · last 30 days</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)"><span data-stat="tt_engagements_30d">1.2K</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">TikTok engagements · last 30 days</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)">+7.4%</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">TikTok follower growth · 30 days</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)"><span data-stat="tt_profile_views_30d">881</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">TikTok profile views · last 30 days</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)"><span data-stat="ig_reach_30d">4.3K</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">IG accounts reached · last 30 days</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 28px 32px">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--rose)"><span data-stat="ig_engagements_30d">559</span></div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">IG engagements · last 30 days</div>
+      </div>
+    </div>
+    <!-- Top performing posts -->
+    <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 32px 36px; margin-top: 20px">
+      <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Top posts · last 30 days</div>
+      <div style="display: grid; grid-template-columns: 1fr auto; gap: 12px 32px; align-items: baseline; margin-top: 24px">
+        <div style="font-family: var(--font-display); font-size: 20px; line-height: 1.4; color: var(--burgundy)">"On today's menu — new prints, new fits, yummy bites"</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); white-space: nowrap">3.4K views · 166 likes · 15 comments</div>
+        <div style="font-family: var(--font-display); font-size: 20px; line-height: 1.4; color: var(--burgundy)">"All the girls wanna come visit meeeee" — NYC guide</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); white-space: nowrap">2.2K views · 10 likes · NYC guide</div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); color: var(--text-muted); margin-top: 20px">Her carousels consistently outperform — audiences bookmark her recommendations to act on them.</div>
+    </div>
+    <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 32px 36px; margin-top: 20px">
+      <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">What people search to find her content</div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px">
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">nyc girls night</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">madhappy nyc</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">nolita shopping</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">poplora bag review</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">chez margaux leopard lounge</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">valersia bags review</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">niihai top dupe</span>
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--burgundy-soft); background: var(--blush-100); border-radius: 999px; padding: 7px 14px">nyc sober activities</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · BRANDS FEATURED -->
+  <section data-screen-label="Brands" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">Brands I've Featured</h2>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Worn, tagged, visited, reviewed</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px">
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 1]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 2]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 3]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 4]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 5]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 6]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 7]</div>
+      <div style-hover="transform: scale(1.03); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 20px 44px rgba(110,20,35,0.18)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: flex; align-items: center; justify-content: center; min-height: 88px; font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy-soft); background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.9)">[Brand 8]</div>
+    </div>
+  </section>
+
+  <!-- 4 · FASHION & STYLE -->
+  <section data-screen-label="Fashion and style" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">Fashion &amp; Style</h2>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Selected stills &amp; reels</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 56px">
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-still-1" shape="rect" placeholder="Fashion still 1" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 12px">View post</a>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-still-2" shape="rect" placeholder="Fashion still 2" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 12px">View post</a>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-still-3" shape="rect" placeholder="Fashion still 3" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 12px">View post</a>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-still-4" shape="rect" placeholder="Fashion still 4" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 12px">View post</a>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-still-5" shape="rect" placeholder="Fashion still 5" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 12px">View post</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 72px">
+      <div style="text-align: center">
+        <div style="max-width: 200px; margin: 0 auto; background: var(--burgundy-900); border-radius: 26px; padding: 10px">
+          <div style="position: relative; aspect-ratio: 9 / 16; background: var(--blush-100); border-radius: 18px; overflow: hidden">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-reel-1" shape="rect" placeholder="Reel 1" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          </div>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 20px">[Brand / Topic]</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 6px">[Content type]</div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 10px">View reel</a>
+      </div>
+      <div style="text-align: center">
+        <div style="max-width: 200px; margin: 0 auto; background: var(--burgundy-900); border-radius: 26px; padding: 10px">
+          <div style="position: relative; aspect-ratio: 9 / 16; background: var(--blush-100); border-radius: 18px; overflow: hidden">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-reel-2" shape="rect" placeholder="Reel 2" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          </div>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 20px">[Brand / Topic]</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 6px">[Content type]</div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 10px">View reel</a>
+      </div>
+      <div style="text-align: center">
+        <div style="max-width: 200px; margin: 0 auto; background: var(--burgundy-900); border-radius: 26px; padding: 10px">
+          <div style="position: relative; aspect-ratio: 9 / 16; background: var(--blush-100); border-radius: 18px; overflow: hidden">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-reel-3" shape="rect" placeholder="Reel 3" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          </div>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 20px">[Brand / Topic]</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 6px">[Content type]</div>
+        <a href="#" style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid var(--rose-faint); padding-bottom: 2px; margin-top: 10px">View reel</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · CONTENT VERTICALS -->
+  <section data-screen-label="Verticals" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">More Verticals</h2>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Content pillars</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px">
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 40px; text-align: center">
+        <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 28px; color: var(--burgundy)">beauty</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 12px">Get ready with me · Product reviews<br>Skincare routines · Beauty favorites</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 40px; text-align: center">
+        <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 28px; color: var(--burgundy)">nyc lifestyle</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 12px">Restaurant reviews · City guides<br>Girls night out · Day in the life</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 40px; text-align: center">
+        <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 28px; color: var(--burgundy)">travel</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 12px">Hotel stays · Destination guides<br>Packing · Travel diaries</div>
+      </div>
+      <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 36px 40px; text-align: center">
+        <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 28px; color: var(--burgundy)">advice &amp; mindset</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 12px">Older sister talks · Growth<br>Career · Independence · Real talk</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · PLATFORMS & ANALYTICS -->
+  <section data-screen-label="Analytics" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">Platforms &amp; Analytics</h2>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Analytics updated July 2026</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; max-width: 720px; margin-left: auto; margin-right: auto">
+      <div style="text-align: center">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Instagram</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; color: var(--rose); margin: 12px 0 24px">2,845</div>
+        <div style="position: relative; aspect-ratio: 9 / 16; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-ig-insights" shape="rect" placeholder="IG insights screenshot — reach, demographics, top locations" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">TikTok</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 40px; color: var(--rose); margin: 12px 0 24px">349</div>
+        <div style="position: relative; aspect-ratio: 9 / 16; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mediakit-tt-analytics" shape="rect" placeholder="TikTok analytics screenshot — views, traffic sources, demographics" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · CLOSING -->
+  <section data-screen-label="Closing" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 160px; box-sizing: border-box; text-align: center">
+    <p style="font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: var(--text-h2); line-height: 1.2; color: var(--burgundy); margin: 0">Let's create something together —</p>
+    <a href="mailto:team.simranmistry@gmail.com" style="display: inline-block; font-family: var(--font-mono); font-size: 14px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background-color: rgba(255,255,255,0.55); background-image: linear-gradient(105deg, rgba(138,36,50,0) 0%, rgba(138,36,50,0) 36%, var(--burgundy-soft) 52%, var(--rose) 66%, var(--burgundy) 84%, var(--burgundy-900) 100%); background-size: 280% 100%; background-position: 0% 50%; backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 16px 32px; box-shadow: 0 16px 40px rgba(110,20,35,0.14), inset 0 1px 0 rgba(255,255,255,0.9); transition: background-position 0.6s cubic-bezier(0.22,1,0.36,1), color 0.35s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease; margin-top: 32px" style-hover="background-position: 100% 50%; color: #fffafa; transform: scale(1.04); box-shadow: 0 24px 60px rgba(110,20,35,0.32), inset 0 1px 0 rgba(255,255,255,0.35)">team.simranmistry@gmail.com</a>
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 24px">@thesimranmistry</div>
+    <div style="font-family: var(--font-script); font-size: 36px; color: var(--rose); margin-top: 20px">SM ♡</div>
+  </section>
+
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { scrolled: false };
+  carouselRef = React.createRef();
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 60;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    this._pauseUntil = 0; this._hover = false; this._drag = null; this._period = 0;
+    const bind = () => {
+      const n = this.carouselRef.current;
+      if (!n || !n.firstElementChild || n.firstElementChild.children.length < 12) { setTimeout(bind, 200); return; }
+      const track = n.firstElementChild;
+      const originals = Array.from(track.children);
+      originals.forEach((c) => track.appendChild(c.cloneNode(true)));
+      requestAnimationFrame(() => {
+        this._period = track.children[originals.length].offsetLeft - originals[0].offsetLeft;
+        n.scrollLeft = 1;
+      });
+      const mark = () => { this._pauseUntil = performance.now() + 1500; };
+      n.addEventListener('wheel', (e) => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) mark(); }, { passive: true });
+      n.addEventListener('mouseleave', () => { this._drag = null; n.style.cursor = 'grab'; });
+      n.addEventListener('pointerdown', (e) => { mark(); this._drag = { x: e.clientX, left: n.scrollLeft }; n.style.cursor = 'grabbing'; });
+      window.addEventListener('pointermove', (e) => {
+        if (!this._drag) return; mark();
+        n.scrollLeft = this._drag.left - (e.clientX - this._drag.x) * 2.5; // swipe multiplier
+      });
+      window.addEventListener('pointerup', () => { this._drag = null; n.style.cursor = 'grab'; });
+    };
+    bind();
+    const step = (now) => {
+      const n = this.carouselRef.current;
+      if (n && this._period > 0) {
+        if (now > this._pauseUntil && !this._hover && !this._drag) n.scrollLeft += 1.2;
+        if (n.scrollLeft >= this._period) n.scrollLeft -= this._period;
+        else if (n.scrollLeft < 1 && !this._drag) n.scrollLeft += this._period;
+      }
+      this._raf = requestAnimationFrame(step);
+    };
+    this._raf = requestAnimationFrame(step);
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this._raf);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+  renderVals() {
+    const scrolled = this.state.scrolled;
+    const glass = 'blur(36px) saturate(2)';
+    return {
+      carouselRef: this.carouselRef,
+      navPillStyle: {
+        display: 'flex', gap: '20px', alignItems: 'center',
+        padding: '16px 36px', borderRadius: '999px', pointerEvents: 'auto',
+        transition: 'background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease',
+        border: '1px solid ' + (scrolled ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0)'),
+        background: scrolled ? 'rgba(255,250,250,0.6)' : 'rgba(255,250,250,0)',
+        backdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        WebkitBackdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        boxShadow: scrolled ? '0 16px 48px rgba(110,20,35,0.18), inset 0 1px 0 rgba(255,255,255,0.9)' : 'none',
+      },
+      badgeGlassStyle: {
+        position: 'absolute', inset: 0, display: 'block',
+        transition: 'opacity 0.5s ease',
+        opacity: scrolled ? 1 : 0,
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

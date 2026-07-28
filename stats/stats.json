@@ -1,0 +1,14 @@
+{
+  "_comment": "Auto-updated social stats. The weekly refresh writes new values here, then apply_stats.py pushes them into the HTML. Editorial/native numbers (171K hero, FYP %, non-follower %, growth) are NOT managed here — edit those by hand in content.html.",
+  "updated": "2026-07-27",
+  "updated_label": "Updated July 2026",
+  "values": {
+    "er_ig": "3.9%",
+    "er_tt": "5.6%",
+    "ig_views_30d": "28.4K",
+    "ig_engagements_30d": "559",
+    "ig_reach_30d": "4.3K",
+    "tt_engagements_30d": "1.2K",
+    "tt_profile_views_30d": "881"
+  }
+}

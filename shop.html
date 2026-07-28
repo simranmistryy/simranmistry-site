@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>The Archive — Simran Mistry</title>
+<link rel="stylesheet" href="styles.css">
+<script src="reveal.js"></script>
+<script>window.addEventListener('unhandledrejection', function (e) { var m = String((e.reason && e.reason.message) || e.reason || ''); if (m.indexOf('skipped') !== -1) e.preventDefault(); });</script>
+<style>
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-fade-out 0.35s ease both; }
+::view-transition-new(root) { animation: vt-fade-in 0.35s ease both; }
+@keyframes vt-fade-out { to { opacity: 0 } }
+@keyframes vt-fade-in { from { opacity: 0 } }
+@keyframes page-enter { from { opacity: 0 } }
+body { animation: page-enter 0.4s ease both; }
+html{scroll-behavior:smooth}</style>
+</helmet>
+
+<div style="background: var(--gradient-ground); color: var(--burgundy); min-height: 100vh">
+
+  <a href="index.html" aria-label="Home" style="position: fixed; top: 18px; left: 24px; z-index: 60; width: 52px; height: 52px; display: block; text-decoration: none; filter: drop-shadow(0 10px 24px rgba(110,20,35,0.3))"><span style="{{ badgeGlassStyle }}"><span style="position: absolute; inset: 0; clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); -webkit-clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); background: linear-gradient(155deg, rgba(255,255,255,0.85) 0%, rgba(255,250,250,0.3) 40%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.6) 100%); backdrop-filter: blur(36px) saturate(2.2); -webkit-backdrop-filter: blur(36px) saturate(2.2)"></span><svg viewBox="0 0 52 52" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none"><path d="M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"></path><path d="M9,13 C11,8.5 14,6 17.5,5.5" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linecap="round"></path></svg></span><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 10px; box-sizing: border-box; font-family: var(--font-script); font-size: 19px; line-height: 1; color: var(--burgundy)">SM</span></a>
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 18px 0; pointer-events: none">
+  <nav style="{{ navPillStyle }}">
+    <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Work</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="content.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Content</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Portfolio</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Shop</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Contact</a>
+  </nav>
+</div>
+
+  <!-- HEADER -->
+  <section data-screen-label="Archive header" style="max-width: var(--page-max); margin: 0 auto; padding: 160px var(--page-gutter) 0; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h1 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h1); line-height: 1; color: var(--burgundy); margin: 0">The Archive</h1>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Curated acquisitions</span>
+    </div>
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 24px">Some links are affiliate links — purchases may earn a commission at no cost to you</div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section data-screen-label="Product grid" style="max-width: var(--page-max); margin: 0 auto; padding: 160px var(--page-gutter) 160px; box-sizing: border-box">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px">
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-1" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-2" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-3" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-4" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-5" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 5; background: var(--gradient-panel); border: 1px solid var(--hairline); box-sizing: border-box; padding: 32px">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="shop-item-6" shape="rect" fit="contain" placeholder="Product image" style="width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">[Product Name]</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">[Descriptor — brand, category]</div>
+        <div style="margin-top: 16px"><span style="display: inline-block; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--hairline-strong); border-radius: var(--radius-tag); padding: 6px 12px 5px; line-height: 1">Shopmy</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--hairline); padding: 48px 0 64px">
+    <div style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter); box-sizing: border-box; display: flex; justify-content: space-between; align-items: baseline; gap: 32px; flex-wrap: wrap">
+      <a href="index.html" style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 24px; color: var(--burgundy); text-decoration: none">Simran Mistry</a>
+      <div style="display: flex; gap: 40px">
+        <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Work</a>
+        <a href="content.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Content</a>
+        <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Portfolio</a>
+        <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Shop</a>
+        <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Contact</a>
+      </div>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">© 2026 Simran Mistry</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { scrolled: false };
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 60;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  renderVals() {
+    const scrolled = this.state.scrolled;
+    const glass = 'blur(36px) saturate(2)';
+    return {
+      navPillStyle: {
+        display: 'flex', gap: '20px', alignItems: 'center',
+        padding: '16px 36px', borderRadius: '999px', pointerEvents: 'auto',
+        transition: 'background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease',
+        border: '1px solid ' + (scrolled ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0)'),
+        background: scrolled ? 'rgba(255,250,250,0.6)' : 'rgba(255,250,250,0)',
+        backdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        WebkitBackdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        boxShadow: scrolled ? '0 16px 48px rgba(110,20,35,0.18), inset 0 1px 0 rgba(255,255,255,0.9)' : 'none',
+      },
+      badgeGlassStyle: {
+        position: 'absolute', inset: 0, display: 'block',
+        transition: 'opacity 0.5s ease',
+        opacity: scrolled ? 1 : 0,
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

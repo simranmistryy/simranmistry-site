@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Portfolio — Simran Mistry</title>
+<link rel="stylesheet" href="styles.css">
+<script src="reveal.js"></script>
+<script>window.addEventListener('unhandledrejection', function (e) { var m = String((e.reason && e.reason.message) || e.reason || ''); if (m.indexOf('skipped') !== -1) e.preventDefault(); });</script>
+<style>
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-fade-out 0.35s ease both; }
+::view-transition-new(root) { animation: vt-fade-in 0.35s ease both; }
+@keyframes vt-fade-out { to { opacity: 0 } }
+@keyframes vt-fade-in { from { opacity: 0 } }
+@keyframes page-enter { from { opacity: 0 } }
+body { animation: page-enter 0.4s ease both; }
+
+html{scroll-behavior:smooth}
+@keyframes blob-a{50%{transform:translate(10vw,14vh) scale(1.18)}}
+@keyframes blob-b{50%{transform:translate(-12vw,-8vh) scale(1.22)}}
+@keyframes blob-c{50%{transform:translate(9vw,-12vh) scale(0.88)}}
+@keyframes wheel-spin{to{transform:translateY(-50%)}}
+</style>
+</helmet>
+
+<div style="background: var(--gradient-ground); color: var(--burgundy); min-height: 100vh; position: relative; overflow-x: clip">
+
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none">
+    <div style="position: absolute; width: 80vw; height: 80vw; top: -28vw; left: -20vw; border-radius: 50%; background: radial-gradient(circle, #eeaebc 0%, rgba(238,174,188,0) 65%); filter: blur(60px); animation: blob-a 26s ease-in-out infinite"></div>
+    <div style="position: absolute; width: 74vw; height: 74vw; top: 24vh; right: -26vw; border-radius: 50%; background: radial-gradient(circle, #f6ccd6 0%, rgba(246,204,214,0) 65%); filter: blur(70px); animation: blob-b 34s ease-in-out infinite"></div>
+    <div style="position: absolute; width: 66vw; height: 66vw; bottom: -24vw; left: 6vw; border-radius: 50%; background: radial-gradient(circle, #e79aab 0%, rgba(231,154,171,0) 65%); filter: blur(80px); animation: blob-c 22s ease-in-out infinite"></div>
+  </div>
+
+  <a href="index.html" aria-label="Home" style="position: fixed; top: 18px; left: 24px; z-index: 60; width: 52px; height: 52px; display: block; text-decoration: none; filter: drop-shadow(0 10px 24px rgba(110,20,35,0.3))"><span style="{{ badgeGlassStyle }}"><span style="position: absolute; inset: 0; clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); -webkit-clip-path: path('M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z'); background: linear-gradient(155deg, rgba(255,255,255,0.85) 0%, rgba(255,250,250,0.3) 40%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.6) 100%); backdrop-filter: blur(36px) saturate(2.2); -webkit-backdrop-filter: blur(36px) saturate(2.2)"></span><svg viewBox="0 0 52 52" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none"><path d="M26,47 C9,35 2,25.5 2,15.5 C2,7.5 8,2 15,2 C19.8,2 24,4.8 26,9 C28,4.8 32.2,2 37,2 C44,2 50,7.5 50,15.5 C50,25.5 43,35 26,47 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"></path><path d="M9,13 C11,8.5 14,6 17.5,5.5" fill="none" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linecap="round"></path></svg></span><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 10px; box-sizing: border-box; font-family: var(--font-script); font-size: 19px; line-height: 1; color: var(--burgundy)">SM</span></a>
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 18px 0; pointer-events: none">
+  <nav style="{{ navPillStyle }}">
+    <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Work</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="content.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Content</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid var(--rose); padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease, border-color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900); border-color: transparent">Portfolio</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Shop</a>
+    <span aria-hidden="true" style="color: var(--rose); font-size: 10px">•</span>
+    <a href="index.html#contact" style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; padding: 17px 16px; margin: -17px -8px; background-image: radial-gradient(ellipse at center, var(--rose) 0%, var(--rose-soft) 50%, rgba(233,195,203,0) 75%); background-repeat: no-repeat; background-position: 50% 50%; background-size: 0% 0%; transition: background-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s ease" style-hover="background-size: 100% 100%; color: var(--burgundy-900)">Contact</a>
+  </nav>
+</div>
+
+  <div style="position: relative; z-index: 1">
+
+  <!-- 1 · INTRO -->
+  <section data-screen-label="Portfolio intro" style="max-width: var(--page-max); margin: 0 auto; padding: 160px var(--page-gutter) 96px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px">
+      <h1 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h1); line-height: 1; color: var(--burgundy); margin: 0">Portfolio</h1>
+      <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">The off-hours archive</span>
+    </div>
+
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.28em; margin-top: 72px; font-family: var(--font-display); font-weight: 500; font-size: clamp(52px, 8vw, 108px); line-height: 1.02; color: var(--burgundy)">
+      <span>I am a</span>
+      <span style="position: relative; display: inline-block; height: 2em; overflow: hidden; vertical-align: middle" style-before="content: ''; position: absolute; top: 0; left: 0; right: 0; height: 0.95em; z-index: 2; pointer-events: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.5) 42%, rgba(0,0,0,0.18) 68%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.5) 42%, rgba(0,0,0,0.18) 68%, transparent 100%)" style-after="content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 0.95em; z-index: 2; pointer-events: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.5) 42%, rgba(0,0,0,0.18) 68%, transparent 100%); mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.5) 42%, rgba(0,0,0,0.18) 68%, transparent 100%)">
+        <span style="display: flex; flex-direction: column; animation: wheel-spin 7.2s linear infinite; will-change: transform">
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Hostess</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Creative</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Learner</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">DJ</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">New Yorker</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Traveler</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Hostess</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Creative</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Learner</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">DJ</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">New Yorker</span>
+          <span style="height: 1.05em; display: flex; align-items: center; font-style: italic; color: var(--rose)">Traveler</span>
+        </span>
+      </span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 56px; font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">
+      <span>[EVENTS · SHOOTS · NOTES]</span>
+      <span>[UPDATED: SUMMER 2026]</span>
+    </div>
+  </section>
+
+  <!-- 2 · CURATED EVENTS -->
+  <section id="events" data-screen-label="Curated events" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+      <div style="display: flex; align-items: baseline; gap: 32px">
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a Hostess</h2>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Hosting is the love language</span>
+      </div>
+      <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">See all hosting →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 72px">
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="event-holi" shape="rect" placeholder="Event photo — Holi" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">Hosted · Spring 2026</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">Holi, In Color</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">Gulal, white outfits ruined on purpose, and a playlist that ran long</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">[GUESTS: 00] · [LOCATION]</div>
+        <button onClick="{{ toggleHoli }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ holiLabel }}</button><div style="{{ holiExp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="border-top: 1px solid var(--hairline); margin-top: 20px; padding-top: 24px">
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">The planning deck</div>
+            <div style="position: relative; aspect-ratio: 16 / 9; background: var(--blush-100); border-radius: 18px; overflow: hidden; margin-top: 14px"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="holi-deck" shape="rect" placeholder="Planning deck — drop the cover or a slide export" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div>
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 10px">[ATTACH: PLANNING DECK — PDF / SLIDES]</div>
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 28px">From the event</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="holi-photo-1" shape="rect" placeholder="Event photo 1" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="holi-photo-2" shape="rect" placeholder="Event photo 2" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="holi-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div>
+          </div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 4 / 3; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="event-birthday" shape="rect" placeholder="Event photo — birthday" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">Hosted</div>
+        </div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 24px">The Birthday</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 12px">An annual production — theme, tablescape, and guest list, fully art-directed</div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 12px">[GUESTS: 00] · [LOCATION]</div>
+        <button onClick="{{ toggleBirthday }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ birthdayLabel }}</button><div style="{{ birthdayExp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="border-top: 1px solid var(--hairline); margin-top: 20px; padding-top: 24px">
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">The planning deck</div>
+            <div style="position: relative; aspect-ratio: 16 / 9; background: var(--blush-100); border-radius: 18px; overflow: hidden; margin-top: 14px"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="birthday-deck" shape="rect" placeholder="Planning deck — drop the cover or a slide export" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div>
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 10px">[ATTACH: PLANNING DECK — PDF / SLIDES]</div>
+            <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 28px">From the event</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="birthday-photo-1" shape="rect" placeholder="Event photo 1" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="birthday-photo-2" shape="rect" placeholder="Event photo 2" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="birthday-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div>
+          </div></div></div>
+      </div>
+    </div>
+    <sc-if value="{{ showUpcomingEvents }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: baseline; gap: 24px; margin-top: 96px; border-bottom: 1px solid var(--hairline); padding-bottom: 20px">
+        <h3 style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 30px; line-height: 1; color: var(--burgundy); margin: 0">up next — summer 2026</h3>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">In planning</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px">
+        <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 40px 44px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px">
+            <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 32px; color: var(--burgundy)">spritz soirée</div>
+            <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">In planning</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 16px">Golden hour · Aperitivo spread · Dress code: linen<br>[DATE TBD] · [ROOFTOP / TERRACE TBD]</div>
+        </div>
+        <div style-hover="transform: scale(1.02); background: rgba(255,255,255,0.72); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); padding: 40px 44px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px">
+            <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 32px; color: var(--burgundy)">a daytime something</div>
+            <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">Ideating</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 2.2; margin-top: 16px">Picnic? Matcha morning? Market walk?<br>[CONCEPT TBD] · [FORMAT: SUNLIGHT, NO AGENDA]</div>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- 3 · CREATIVE WORK -->
+  <section id="creative" data-screen-label="Creative work" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+      <div style="display: flex; align-items: baseline; gap: 32px">
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a Creative</h2>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Shoots, series &amp; experiments</span>
+      </div>
+      <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">See the full gallery →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px">
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-1" shape="rect" src="assets/imagery/soho-denim.jpeg" placeholder="Shoot — Soho denim" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">Outfit series · 001</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">denim in soho</div>
+        <button onClick="{{ toggleCr1 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr1Label }}</button><div style="{{ cr1Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-1-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-1-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-1-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-2" shape="rect" src="assets/imagery/night-halter.jpeg" placeholder="Shoot — night out" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">Outfit series · 002</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">after dark</div>
+        <button onClick="{{ toggleCr2 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr2Label }}</button><div style="{{ cr2Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-2-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-2-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-2-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-3" shape="rect" src="assets/imagery/soho-wine.jpeg" placeholder="Shoot — with friends" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">With friends</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">wine hour</div>
+        <button onClick="{{ toggleCr3 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr3Label }}</button><div style="{{ cr3Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-3-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-3-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-3-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-4" shape="rect" placeholder="Photo shoot with friends" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">With friends</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">[shoot title]</div>
+        <button onClick="{{ toggleCr4 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr4Label }}</button><div style="{{ cr4Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-4-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-4-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-4-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-5" shape="rect" placeholder="Outfit series photo" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">Outfit series · 003</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">[series title]</div>
+        <button onClick="{{ toggleCr5 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr5Label }}</button><div style="{{ cr5Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-5-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-5-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-5-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+      <div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-6" shape="rect" placeholder="Creative project photo" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); margin-top: 14px">Experiment</div>
+        <div style="font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--rose); margin-top: 4px">[project title]</div>
+        <button onClick="{{ toggleCr6 }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 18px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">{{ cr6Label }}</button><div style="{{ cr6Exp }}"><div style="overflow: hidden; min-height: 0">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px"><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-6-alt-1" shape="rect" placeholder="Alt frame" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-6-alt-2" shape="rect" placeholder="Behind the scenes" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div><div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 18px; overflow: hidden"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="creative-6-video" shape="rect" placeholder="Video still — drop a clip thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import></div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · NOTES -->
+  <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+    <section id="notes" data-screen-label="Notes and hobbies" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+        <div style="display: flex; align-items: baseline; gap: 32px">
+          <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a Learner</h2>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Hobbies &amp; things I'm learning</span>
+        </div>
+        <a href="https://substack.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">Read on Substack →</a>
+      </div>
+      <div style="margin-top: 48px">
+        <div onClick="{{ toggleNote1 }}" style="display: grid; grid-template-columns: 140px 1fr auto; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">Hosting</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">Tablescapes &amp; a repeatable dinner-party system</span>
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">Ongoing</span>
+        </div>
+        <div style="{{ note1Exp }}"><div style="overflow: hidden; min-height: 0"><p style="font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.6; color: var(--burgundy); margin: 0; padding: 20px 0 28px; max-width: 720px; text-wrap: pretty; border-bottom: 1px solid var(--hairline)">The dinner-party system: one master run-of-show doc, a tablescape kit that lives in a single bin, and a standing group-chat RSVP flow. Every gathering starts 70% planned before I pick a date.</p></div></div>
+        <div onClick="{{ toggleNote2 }}" style="display: grid; grid-template-columns: 140px 1fr auto; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">Photo</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">Documenting friends — building the archive</span>
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">Learning</span>
+        </div>
+        <div style="{{ note2Exp }}"><div style="overflow: hidden; min-height: 0"><p style="font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.6; color: var(--burgundy); margin: 0; padding: 20px 0 28px; max-width: 720px; text-wrap: pretty; border-bottom: 1px solid var(--hairline)">Shooting friends on a 35mm point-and-shoot and learning to color-grade the scans. The goal is a printed zine of the year’s archive by December.</p></div></div>
+        <div onClick="{{ toggleNote3 }}" style="display: grid; grid-template-columns: 140px 1fr auto; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">[Hobby]</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">[Something I'm learning right now]</span>
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">Learning</span>
+        </div>
+        <div style="{{ note3Exp }}"><div style="overflow: hidden; min-height: 0"><p style="font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.6; color: var(--burgundy); margin: 0; padding: 20px 0 28px; max-width: 720px; text-wrap: pretty; border-bottom: 1px solid var(--hairline)">[Notes about this hobby — what you’re practicing, what it’s teaching you, and what you want to make next.]</p></div></div>
+        <div onClick="{{ toggleNote4 }}" style="display: grid; grid-template-columns: 140px 1fr auto; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
+          <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">[Hobby]</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">[A note, obsession, or work in progress]</span>
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 6px 12px; white-space: nowrap">Someday</span>
+        </div>
+        <div style="{{ note4Exp }}"><div style="overflow: hidden; min-height: 0"><p style="font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.6; color: var(--burgundy); margin: 0; padding: 20px 0 28px; max-width: 720px; text-wrap: pretty; border-bottom: 1px solid var(--hairline)">[A running note — the obsession of the season, the work in progress, the thing you keep coming back to.]</p></div></div>
+      </div>
+    </section>
+  </sc-if>
+
+  <!-- 5 · PLAYLISTS -->
+  <section id="playlists" data-screen-label="Playlists" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+      <div style="display: flex; align-items: baseline; gap: 32px">
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a DJ</h2>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">On repeat, always</span>
+      </div>
+      <a href="https://open.spotify.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">Follow on Spotify →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px">
+      <sc-for list="{{ playlists }}" as="pl" hint-placeholder-count="3">
+        <div style="{{ pl.wrapStyle }}">
+          <a href="https://open.spotify.com" target="_blank" rel="noopener" style="display: block; text-decoration: none">
+            <div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.03); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ pl.slotId }}" shape="rect" placeholder="Playlist cover" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+              <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">Playlist</div>
+            </div>
+            <div style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy); margin-top: 20px">{{ pl.title }}</div>
+            <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--rose); margin-top: 10px">{{ pl.desc }}</div>
+          </a>
+        </div>
+      </sc-for>
+    </div>
+    <button onClick="{{ shufflePlaylists }}" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); background: none; border: none; padding: 0; cursor: pointer; margin-top: 32px; transition: color 0.3s ease" style-hover="color: var(--burgundy)">↻ Shuffle the set — {{ playlistCount }} in rotation</button>
+  </section>
+
+  <!-- 6 · NYC MAP LISTS -->
+  <section id="nyc" data-screen-label="NYC places" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+      <div style="display: flex; align-items: baseline; gap: 32px">
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a New Yorker</h2>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">My New York, mapped</span>
+      </div>
+      <a href="https://beliapp.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">Follow on Beli →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px">
+      <a href="https://maps.google.com" target="_blank" rel="noopener" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 16 / 10; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="nyc-coffee" shape="rect" placeholder="Map screenshot — coffee & matcha list" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">[00 places]</div>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 20px">
+          <span style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy)">coffee &amp; matcha</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); white-space: nowrap">Open the list →</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted); margin-top: 8px">The morning rotation — no bad cortado on this map</div>
+      </a>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 16 / 10; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="nyc-dinner" shape="rect" placeholder="Map screenshot — dinner list" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">[00 places]</div>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 20px">
+          <span style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy)">dinner, always</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); white-space: nowrap">Open the list →</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted); margin-top: 8px">Where I take out-of-towners and never miss</div>
+      </a>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 16 / 10; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="nyc-drinks" shape="rect" placeholder="Map screenshot — drinks list" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">[00 places]</div>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 20px">
+          <span style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy)">the drink spot</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); white-space: nowrap">Open the list →</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted); margin-top: 8px">Natural wine, a good martini, a patio in summer</div>
+      </a>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 16 / 10; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="nyc-walks" shape="rect" placeholder="Map screenshot — walks list" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; top: 16px; left: 16px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 8px 14px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none">[00 places]</div>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 20px">
+          <span style="font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: var(--text-title); line-height: 1.2; color: var(--burgundy)">golden-hour walks</span>
+          <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); white-space: nowrap">Open the list →</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted); margin-top: 8px">Routes that end with the sun over the water</div>
+      </a>
+    </div>
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 32px">[GOOGLE MAPS LISTS — PASTE EACH SHARED-LIST LINK ON ITS CARD]</div>
+  </section>
+
+  <!-- 7 · TRAVEL -->
+  <section id="travel" data-screen-label="Travel" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; flex-wrap: wrap">
+      <div style="display: flex; align-items: baseline; gap: 32px">
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-h2); line-height: 1; color: var(--burgundy); margin: 0">I am a Traveler</h2>
+        <span style="font-family: var(--font-mono); font-size: var(--label-size); color: var(--text-muted)">Passport, always packed</span>
+      </div>
+      <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background: rgba(255,255,255,0.55); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 12px 22px; box-shadow: 0 12px 30px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, background 0.3s ease" style-hover="transform: scale(1.04); background: rgba(255,255,255,0.85); box-shadow: 0 20px 44px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)">See the travel log →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px">
+      <a href="#" style="grid-row: span 2; text-decoration: none">
+        <div style="position: relative; aspect-ratio: 3 / 4; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="travel-1" shape="rect" placeholder="Photo — destination" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none"><span>Mykonos</span><span style="color: var(--rose)">'25</span></div>
+        </div>
+      </a>
+      <a href="#" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="travel-2" shape="rect" placeholder="Photo — destination" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none"><span>Lisbon</span><span style="color: var(--rose)">'25</span></div>
+        </div>
+      </a>
+      <a href="#" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="travel-3" shape="rect" placeholder="Photo — destination" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none"><span>Tokyo</span><span style="color: var(--rose)">'24</span></div>
+        </div>
+      </a>
+      <a href="#" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="travel-4" shape="rect" placeholder="Photo — destination" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none"><span>Mexico City</span><span style="color: var(--rose)">'24</span></div>
+        </div>
+      </a>
+      <a href="#" style="text-decoration: none">
+        <div style="position: relative; aspect-ratio: 1; background: var(--blush-100); border-radius: 24px; overflow: hidden; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease" style-hover="transform: scale(1.02); box-shadow: 0 28px 64px rgba(110,20,35,0.22)">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="travel-5" shape="rect" placeholder="Photo — destination" style="position: absolute; inset: 0; width: 100%; height: 100%" hint-size="100%,100%"></x-import>
+          <div style="position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); background: rgba(255,250,250,0.6); backdrop-filter: blur(28px) saturate(1.9); -webkit-backdrop-filter: blur(28px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 20px rgba(110,20,35,0.1), inset 0 1px 0 rgba(255,255,255,0.9); pointer-events: none"><span>Amalfi</span><span style="color: var(--rose)">'23</span></div>
+        </div>
+      </a>
+    </div>
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-top: 32px">[SWAP IN YOUR OWN TRIPS — EDIT EACH CAPTION &amp; DROP A PHOTO]</div>
+  </section>
+
+  <!-- 8 · CLOSING -->
+  <section data-screen-label="Closing" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 160px; box-sizing: border-box; text-align: center">
+    <p style="font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: var(--text-h2); line-height: 1.2; color: var(--burgundy); margin: 0">Come to the next one —</p>
+    <a href="mailto:team.simranmistry@gmail.com" style="display: inline-block; font-family: var(--font-mono); font-size: 14px; letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy); text-decoration: none; background-color: rgba(255,255,255,0.55); background-image: linear-gradient(105deg, rgba(138,36,50,0) 0%, rgba(138,36,50,0) 36%, var(--burgundy-soft) 52%, var(--rose) 66%, var(--burgundy) 84%, var(--burgundy-900) 100%); background-size: 280% 100%; background-position: 0% 50%; backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.8); border-radius: 999px; padding: 16px 32px; box-shadow: 0 16px 40px rgba(110,20,35,0.14), inset 0 1px 0 rgba(255,255,255,0.9); transition: background-position 0.6s cubic-bezier(0.22,1,0.36,1), color 0.35s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease; margin-top: 32px" style-hover="background-position: 100% 50%; color: #fffafa; transform: scale(1.04); box-shadow: 0 24px 60px rgba(110,20,35,0.32), inset 0 1px 0 rgba(255,255,255,0.35)">team.simranmistry@gmail.com</a>
+    <div style="font-family: var(--font-script); font-size: 36px; color: var(--rose); margin-top: 20px">SM ♡</div>
+  </section>
+
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showUpcomingEvents&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Events&quot;},
+  &quot;showNotes&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Notes&quot;}
+}">
+class Component extends DCLogic {
+  state = { scrolled: false, expanded: {}, pIdx: 0 };
+  static CURRENTLY = [
+    { label: 'Reading', value: 'A stack of cookbooks and one novel I keep restarting' },
+    { label: 'Listening', value: 'Late-night jazz and whatever the dinner playlist becomes' },
+    { label: 'Making', value: 'A tablescape kit and a film zine of this year' },
+    { label: 'Craving', value: 'A martini and a patio, somewhere with no reservation' },
+    { label: 'Next trip', value: 'Undecided — passport\u2019s already by the door' },
+  ];
+  static PLAYLISTS = [
+    { slotId: 'pl-1', title: 'sunday reset', desc: 'Slow mornings, coffee, no plans' },
+    { slotId: 'pl-2', title: 'the commute', desc: 'For the train and a clear head' },
+    { slotId: 'pl-3', title: 'dinner party', desc: 'What plays while the table fills up' },
+    { slotId: 'pl-4', title: 'gym hours', desc: 'Loud enough to finish the set' },
+    { slotId: 'pl-5', title: 'rainy day', desc: 'Window seat, something soft' },
+    { slotId: 'pl-6', title: 'throwbacks', desc: 'The ones that never left rotation' },
+    { slotId: 'pl-7', title: 'heads down', desc: 'Focus, notifications off' },
+  ];
+  toggleExp = (id) => this.setState((s) => ({ expanded: { ...s.expanded, [id]: !s.expanded[id] } }));
+  shufflePlaylists = () => this.setState((s) => ({ pIdx: (s.pIdx + 3) % Component.PLAYLISTS.length }));
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 60;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    this._pTimer = setInterval(() => {
+      this.setState((s) => ({ pIdx: (s.pIdx + 1) % Component.PLAYLISTS.length }));
+    }, 9000);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    clearInterval(this._pTimer);
+  }
+  renderVals() {
+    const scrolled = this.state.scrolled;
+    const glass = 'blur(36px) saturate(2)';
+    const kinds = { holi: 'archive', birthday: 'archive', cr1: 'frames', cr2: 'frames', cr3: 'frames', cr4: 'frames', cr5: 'frames', cr6: 'frames', note1: 'note', note2: 'note', note3: 'note', note4: 'note' };
+    const labels = { archive: ['[ + ] Deck, photos & video', '[ \u2212 ] Close the archive'], frames: ['[ + ] More frames', '[ \u2212 ] Close'], note: ['[ + ] Read the note', '[ \u2212 ] Close'] };
+    const exp = {};
+    for (const id of Object.keys(kinds)) {
+      const open = !!this.state.expanded[id];
+      const cap = id.charAt(0).toUpperCase() + id.slice(1);
+      exp['toggle' + cap] = () => this.toggleExp(id);
+      exp[id + 'Label'] = labels[kinds[id]][open ? 1 : 0];
+      exp[id + 'Exp'] = { display: 'grid', gridTemplateRows: open ? '1fr' : '0fr', transition: 'grid-template-rows 0.55s cubic-bezier(0.22,1,0.36,1)' };
+    }
+    const total = Component.PLAYLISTS.length;
+    const vis = new Set([0, 1, 2].map((k) => (this.state.pIdx + k) % total));
+    const playlists = Component.PLAYLISTS.map((p, i) => ({
+      ...p,
+      wrapStyle: { display: vis.has(i) ? 'block' : 'none' },
+    }));
+    const toc = [
+      { href: '#events', title: 'I am a Hostess', meta: 'Curated events & hosting' },
+      { href: '#creative', title: 'I am a Creative', meta: 'Shoots, series & experiments' },
+      { href: '#notes', title: 'I am a Learner', meta: 'Hobbies & things I\u2019m learning', notes: true },
+      { href: '#playlists', title: 'I am a DJ', meta: 'Playlists on repeat' },
+      { href: '#nyc', title: 'I am a Local', meta: 'My New York, mapped' },
+      { href: '#travel', title: 'I am a Traveler', meta: 'The travel log' },
+    ];
+    const showNotes = this.props.showNotes ?? true;
+    const tocItems = toc
+      .filter((t) => !t.notes || showNotes)
+      .map((t, i) => ({ ...t, num: String(i + 1).padStart(2, '0') }));
+    return {
+      ...exp,
+      currently: Component.CURRENTLY,
+      tocItems,
+      playlists,
+      playlistCount: total,
+      shufflePlaylists: this.shufflePlaylists,
+      showUpcomingEvents: this.props.showUpcomingEvents ?? true,
+      showNotes: this.props.showNotes ?? true,
+      navPillStyle: {
+        display: 'flex', gap: '20px', alignItems: 'center',
+        padding: '16px 36px', borderRadius: '999px', pointerEvents: 'auto',
+        transition: 'background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease',
+        border: '1px solid ' + (scrolled ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0)'),
+        background: scrolled ? 'rgba(255,250,250,0.6)' : 'rgba(255,250,250,0)',
+        backdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        WebkitBackdropFilter: scrolled ? glass : 'blur(0px) saturate(1)',
+        boxShadow: scrolled ? '0 16px 48px rgba(110,20,35,0.18), inset 0 1px 0 rgba(255,255,255,0.9)' : 'none',
+      },
+      badgeGlassStyle: {
+        position: 'absolute', inset: 0, display: 'block',
+        transition: 'opacity 0.5s ease',
+        opacity: scrolled ? 1 : 0,
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

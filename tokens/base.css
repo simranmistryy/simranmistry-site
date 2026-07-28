@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--burgundy); text-decoration: none; }
+a:hover { color: var(--rose); }

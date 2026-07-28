@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap");
+
+:root {
+  /* Families */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif; /* display + headlines + serif numbers */
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace; /* labels, nav, metadata, tags */
+  --font-script: "Pinyon Script", cursive; /* monogram / signature accents */
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;       /* body copy only — rare */
+
+  /* Display scale (serif) */
+  --text-hero: clamp(72px, 9vw, 128px);  /* italic, weight 400-500 */
+  --text-h1: 64px;
+  --text-h2: 44px;
+  --text-title: 28px;   /* card / row titles */
+  --text-stat: 64px;    /* stat band numbers */
+
+  /* Mono label system — always uppercase + letterspaced */
+  --label-size: 11px;
+  --label-size-sm: 10px;
+  --label-tracking: 0.18em;
+  --label-tracking-wide: 0.3em;
+
+  /* Body (sans, rare) */
+  --body-size: 15px;
+  --body-leading: 1.6;
+}
