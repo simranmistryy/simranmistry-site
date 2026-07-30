@@ -1,0 +1,17 @@
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 144px;   /* default section spacing — generous */
+
+  --page-max: 1200px;
+  --page-gutter: 64px;
+
+  --radius-none: 0;    /* cards and images are square-cornered */
+  --radius-tag: 2px;   /* only tags get a whisper of rounding */
+}

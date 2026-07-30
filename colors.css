@@ -1,0 +1,28 @@
+:root {
+  /* Base palette — blush & burgundy, light mode only */
+  --burgundy-900: #4a0d14;
+  --burgundy: #841420;        /* deep red burgundy — display type, primary text */
+  --burgundy-soft: #8a2432;
+  --rose: #c06a7c;            /* mid-rose — secondary text, stat numbers */
+  --rose-soft: #d79aa6;       /* muted metadata, faded notes */
+  --rose-faint: #e9c3cb;
+  --blush-300: #f3c9d1;
+  --blush-200: #f8dce1;
+  --blush-100: #fbebee;
+  --blush-50: #fdf6f6;
+  --paper: #fffafa;
+
+  /* Semantic aliases */
+  --text-display: var(--burgundy);
+  --text-primary: var(--burgundy);
+  --text-secondary: var(--rose);
+  --text-muted: #a94f64;      /* darkened rose — legible small print / captions */
+  --surface-page: var(--blush-50);
+  --surface-card: rgba(255, 255, 255, 0.45);
+  --hairline: rgba(110, 20, 35, 0.14);
+  --hairline-strong: rgba(110, 20, 35, 0.32);
+
+  /* Grounds — soft pink-to-white gradients */
+  --gradient-ground: linear-gradient(170deg, #f5cdd5 0%, #fbe7ea 45%, #fef8f7 100%);
+  --gradient-panel: linear-gradient(180deg, #fbe9ec 0%, #fef8f7 100%);
+}
