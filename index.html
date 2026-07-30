@@ -106,12 +106,27 @@ html{scroll-behavior:smooth}
     </div>
   </header>
 
+  <!-- BRAND STRIP -->
+  <section aria-label="Brand partnerships" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 120px; box-sizing: border-box">
+    <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px">Partnered with</div>
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 18px 44px; font-family: var(--font-display); font-weight: 500; font-size: 26px; color: var(--burgundy)">
+      <span>Josie Maran</span>
+      <span>L’Occitane</span>
+      <span>Charlotte Tilbury</span>
+      <span>Miu Miu</span>
+      <span>Sam Edelman</span>
+      <span>On The House Network</span>
+      <span>CSB</span>
+    </div>
+  </section>
+
+
   <!-- 2 · TRUST BAND -->
   <section data-screen-label="Trust band" style="max-width: var(--page-max); margin: 0 auto; padding: 0 var(--page-gutter) 144px; box-sizing: border-box">
     <div style-hover="transform: scale(1.01); background: rgba(255,255,255,0.68); backdrop-filter: blur(44px) saturate(2.4); -webkit-backdrop-filter: blur(44px) saturate(2.4); box-shadow: 0 30px 70px rgba(110,20,35,0.2), inset 0 1px 0 rgba(255,255,255,1)" style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease; display: grid; grid-template-columns: 1fr 1fr 1fr; background: rgba(255,255,255,0.5); backdrop-filter: blur(32px) saturate(1.9); -webkit-backdrop-filter: blur(32px) saturate(1.9); border: 1px solid rgba(255,255,255,0.75); border-radius: 24px; box-shadow: 0 20px 50px rgba(110,20,35,0.12), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(255,255,255,0.3); overflow: hidden">
       <div style="padding: 44px 40px 48px; border-right: 1px solid var(--hairline); display: flex; flex-direction: column">
         <div style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--burgundy)">Product</div>
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 24px">$3.2M</div>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-stat); line-height: 1.1; color: var(--rose); margin-top: 24px">$1M+</div>
         <div style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted); line-height: 1.9; margin-top: 16px">Client savings unlocked<br>at Spotnana</div>
         <a href="work.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none; margin-top: auto; padding-top: 24px">The work →</a>
       </div>
@@ -194,15 +209,11 @@ html{scroll-behavior:smooth}
       </div>
       <div onClick="{{ openPost2 }}" style="display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
         <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">Feb 2026</span>
-        <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">From Neuroscience to Product Management</span>
+        <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">On Never Stopping Learning</span>
       </div>
       <div onClick="{{ openPost3 }}" style="display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
         <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">Jan 2026</span>
         <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">Why I Document My Twenties</span>
-      </div>
-      <div onClick="{{ openPost4 }}" style="display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: 24px; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--hairline); cursor: pointer; border-radius: 12px; transition: background 0.35s ease" style-hover="background: rgba(255,255,255,0.45)">
-        <span style="font-family: var(--font-mono); font-size: var(--label-size); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">Dec 2025</span>
-        <span style="font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.25; color: var(--burgundy)">What Sorority Recruitment Taught Me About Funnels</span>
       </div>
     </div>
   </section>
@@ -222,6 +233,9 @@ html{scroll-behavior:smooth}
         <a href="portfolio.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Portfolio</a>
         <a href="shop.html" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Shop</a>
         <a href="#contact" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Contact</a>
+        <a href="https://shopmy.us/shop/simranmistry?Section_id=2533502&amp;tab=collections" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">ShopMy</a>
+        <a href="https://www.linkedin.com/in/simranmistry/" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">LinkedIn</a>
+        <a href="https://linktr.ee/simranmistry" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--rose); text-decoration: none">Linktree</a>
       </div>
       <span style="font-family: var(--font-mono); font-size: var(--label-size-sm); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-muted)">© 2026 Simran Mistry</span>
     </div>
@@ -263,13 +277,13 @@ class Component extends DCLogic {
     aviation: { kicker: 'Case study · 2023–Present', title: 'Aviation Travel at Spotnana', dek: 'End-to-end product ownership for a Series C travel-tech platform.', body: [
       { h: '', p: 'I own the aviation vertical at Spotnana — everything from shopping and booking flows to post-ticketing servicing. It is the deepest, oldest, most regulation-encrusted corner of travel tech, which is exactly why I love it.' },
       { h: 'The problem space', p: 'Corporate travel runs on infrastructure designed in the 1960s. GDS green screens, fare rules written like tax code, and a dozen airline-specific exceptions for every "standard." My job is to hide all of that behind an experience a traveler actually enjoys.' },
-      { h: 'What I shipped', p: 'Over two years: rebooking flows that handle 85% of changes without an agent, seat-map coverage across 40+ carriers, and the fare-intelligence layer that powers our unused-credit work. Together these unlocked $3.2M in measurable client savings.' },
+      { h: 'What I shipped', p: 'Over two years: rebooking flows that handle 85% of changes without an agent, seat-map coverage across 40+ carriers, and the fare-intelligence layer that powers our unused-credit work. Together these unlocked $1M+ in measurable client savings.' },
       { h: '', p: 'The through-line: take a workflow that used to require a phone call, and make it a tap. Then instrument it so we can prove it worked.' },
     ]},
     credits: { kicker: 'Case study · 2024', title: 'Company Credits: Zero to One', dek: 'The industry\u2019s first self-serve credit reassignment feature.', body: [
       { h: '', p: 'When an employee leaves a company, their unused flight credits usually die with them. Billions of dollars evaporate this way every year, and every TMC "solution" was a spreadsheet and a support queue.' },
       { h: 'The insight', p: 'Airlines already allow name changes on credits in specific fare contexts — nobody had built the product plumbing to do it at scale. We mapped the rules across carriers, built a validation engine, and put a reassign button where a support ticket used to be.' },
-      { h: 'Outcome', p: 'First-in-industry. Adopted by our largest enterprise accounts within a quarter, and the single biggest contributor to that $3.2M savings figure. Zero-to-one products are mostly archaeology: the value was always there, buried under process.' },
+      { h: 'Outcome', p: 'First-in-industry. Adopted by our largest enterprise accounts within a quarter, and the single biggest contributor to that $1M+ savings figure. Zero-to-one products are mostly archaeology: the value was always there, buried under process.' },
     ]},
     ndc: { kicker: 'Case study · 2024', title: 'NDC Partner Onboarding Playbook', dek: 'Cut airline integration time 80% through standardized systems.', body: [
       { h: '', p: 'Every new NDC airline integration used to be a bespoke six-month project — custom test plans, custom edge cases, custom heartbreak.' },
@@ -281,26 +295,43 @@ class Component extends DCLogic {
       { h: 'By the numbers', p: 'A single post at 171K views — 60\u00d7 my follower count at the time — taught me more about hooks and retention than any growth deck. I treat the account like a product: hypotheses, weekly reviews, honest post-mortems.' },
       { h: '', p: 'The portfolio is also a lab for my PM work. Nothing sharpens your instinct for what people actually want like publishing into the void and watching the numbers come back.' },
     ]},
-    post1: { kicker: 'Essay · Mar 2026', title: 'What I Learned Leading My First AI Product Initiative', dek: 'Notes from shipping an LLM feature inside a very un-LLM industry.', body: [
-      { h: '', p: 'This year I led my first AI initiative at work — an assistant that reads fare rules so humans never have to. Here is what survived contact with reality.' },
-      { h: '1. Demos are free, reliability is expensive', p: 'The prototype took a week and wowed everyone. The next six months were spent on the 4% of cases where being wrong costs someone a ticket. The demo is 1% of the work; the eval harness is the product.' },
-      { h: '2. Your data is the moat, and it\u2019s dirty', p: 'Our advantage wasn\u2019t the model — everyone has the model. It was ten years of structured fare data, which turned out to be 30% mislabeled. Budget for the janitorial work.' },
-      { h: '3. Ship the boring version', p: 'We cut the chat interface entirely. The winning version was a single well-placed suggestion inside an existing flow. Nobody wants to talk to your product; they want their afternoon back.' },
+    post1: { kicker: "Essay · Mar 2026", title: "What I Learned Leading My First AI Product Initiative", dek: "On being the non-technical PM who stopped apologizing for it.", body: [
+      { h: "", p: "I am a non-technical product manager, and for most of my career I have treated that like a diagnosis." },
+      { h: "", p: "I nodded through conversations about latency and endpoints and data models with the specific facial expression of someone who plans to look it all up later. Sometimes I did look it up later. Usually I didn't, because asking a stranger on the internet felt less humiliating than asking the engineer sitting four feet away from me, and I never got around to either one." },
+      { h: "", p: "So when AI started showing up in every meeting and every roadmap and every article I read, my first reaction wasn't excitement. It was dread. Here was one more technical thing I would be behind on. One more room where I'd be the person catching up." },
+      { h: "", p: "Looking back, that was the least useful way I could have thought about it." },
+      { h: "", p: "Because the world of AI is normalizing at a speed I've never seen anything normalize at, and while that happens, the gap between people who use it well and people who avoid it is getting wider by the month. I did not want to spend the rest of my career on the wrong side of that gap. And underneath the fear was something simpler: I like this job. I like most parts of it, most days. I wasn't willing to sit out the most interesting thing to happen to it." },
+      { h: "", p: "So I decided to use AI for everything I possibly could, badly at first, and see what happened." },
+      { h: "", p: "It started with PRDs. I'd write a draft, hand it over, ask what was unclear, ask what an engineer would push back on, ask it to explain the three terms in my own document that I'd been using without fully understanding. Nobody was watching. That turned out to matter more than I expected." },
+      { h: "", p: "Then it went further than writing. I started prototyping my own features, all the way through, instead of describing them in a doc and hoping the picture in my head survived translation. Walking into a review with something people can click on changes the entire conversation. You stop debating what you meant." },
+      { h: "", p: "Now I'm working on putting AI into our platform itself, in a handful of ways I think will genuinely be useful to the millions of people who use it. Not the version of AI that gets added to a product so it can be mentioned in a press release. The version that removes a step someone actually hates doing." },
+      { h: "", p: "This took a long time. It's still taking a long time. Some weeks it feels like the capabilities are endless, right up until my credits are." },
+      { h: "", p: "But the barrier I spent years apologizing for is mostly gone. I ask better questions now. I can follow the technical conversation, and more often than not I can contribute to it. I stopped introducing myself as the non-technical one." },
+      { h: "", p: "This initiative is the first of many. That's the part I'm most excited about." },
     ]},
-    post2: { kicker: 'Essay · Feb 2026', title: 'From Neuroscience to Product Management', dek: 'Why studying brains was accidentally perfect PM training.', body: [
-      { h: '', p: 'I studied neuroscience because I wanted to understand why people do what they do. I became a PM for the same reason — the lab just has better snacks now.' },
-      { h: 'The transferable skill', p: 'Neuroscience teaches you that behavior is data and self-report is fiction. Users tell you they want more features; their session recordings tell you they want fewer. Trust the electrode, not the interview.' },
-      { h: '', p: 'The other gift was comfort with negative results. Most experiments fail. Most product bets fail. The discipline is in writing down what you expected before you look — in both fields, the person who keeps honest lab notes wins eventually.' },
+    post2: { kicker: "Essay · Feb 2026", title: "On Never Stopping Learning", dek: "On Hindi, AI, and staying visibly bad at something new.", body: [
+      { h: "", p: "The most interesting people I know are all still learning something." },
+      { h: "", p: "Not strategically. Not for a promotion or a title or a line on a profile. They're learning because they never quietly decided there was a ceiling on what they could pick up, and it shows in how they talk about almost everything." },
+      { h: "", p: "Here's the part I find remarkable. Because they believe that about themselves, the people around them start believing it too. It spreads. You spend a year near someone like that and you find yourself signing up for something you would have called unrealistic before you met them." },
+      { h: "", p: "Right now I'm learning Hindi, and I'm learning AI." },
+      { h: "", p: "Hindi is the one I've been circling for years. When I was younger I wanted to speak everything. I had a whole list. Latin was on it, which tells you something about the kind of teenager I was." },
+      { h: "", p: "I still think it's one of the most impressive things a person can do, because a language is never only a language. It's a set of jokes that don't translate, a way of showing respect that English doesn't have a word for, an entire relationship to time hidden inside the grammar. You learn a language and you get handed a culture sideways, whether you asked for it or not." },
+      { h: "", p: "Hindi is slower going than I expected. My accent is a problem. My vocabulary is a toddler's. I understand roughly three times more than I can say, which is apparently normal and still frustrating." },
+      { h: "", p: "But I'm keeping at it, because the version of me I want to be at forty is someone who is still visibly, slightly bad at something new." },
     ]},
-    post3: { kicker: 'Essay · Jan 2026', title: 'Why I Document My Twenties', dek: 'On photobooth strips, Substack archives, and building a memory you can visit.', body: [
-      { h: '', p: 'I photograph my friends constantly. I write down dinners that don\u2019t matter yet. People ask if it\u2019s for content, and the honest answer is that the content is a side effect.' },
-      { h: 'The archive argument', p: 'Your twenties are the last decade where everything is a first. First apartment, first title, first friend who moves away. Documentation is cheap and forgetting is permanent — the trade is obvious to me.' },
-      { h: '', p: 'The practice changed how I live, not just how I remember. When you know the dinner will be documented, you set the table. A little audience — even a future you — raises the standard of the present.' },
-    ]},
-    post4: { kicker: 'Essay · Dec 2025', title: 'What Sorority Recruitment Taught Me About Funnels', dek: 'Round by round, recruitment is the most honest conversion funnel ever built.', body: [
-      { h: '', p: 'Recruitment is a funnel with four rounds, hard capacity limits, and mutual selection. Every growth lesson I use as a PM, I learned first in a house full of name tags.' },
-      { h: 'Qualify early, honestly', p: 'The houses that struggled tried to be everything to everyone in round one. The strong ones signaled clearly and let the wrong fits self-select out early. Cheap top-of-funnel volume is a vanity metric — in rush and in SaaS.' },
-      { h: 'Retention is the product', p: 'Everyone obsesses over bid day; nobody measures who is still showing up in March. The real funnel doesn\u2019t end at conversion. It ends at belonging — activation and retention, in growth-speak.' },
+    post3: { kicker: "Essay · Jan 2026", title: "Why I Document My Twenties", dek: "On borrowed nostalgia, and building a memory you can visit.", body: [
+      { h: "", p: "My favorite thing to do is look at old photos of my parents." },
+      { h: "", p: "Not the posed ones. The ones from before, where my mother is young and unbothered and has no idea what's coming, and my father is laughing at something outside the frame that nobody thought to write down." },
+      { h: "", p: "The best part is sitting next to them while they look. One picture turns into forty minutes of a story I've never heard, about a friend I've never met, in a place I've never been. And I end up with something that feels like a memory even though I wasn't there. Borrowed nostalgia for a life that happened before mine." },
+      { h: "", p: "There aren't many of those photos. That's the thing I keep coming back to. A handful of them, for two entire decades of two entire people." },
+      { h: "", p: "I have the opposite problem. I can capture almost anything, from almost any angle, at almost no cost. Not just a moment but the sound of it, the day around it, what we were talking about on the way there." },
+      { h: "", p: "So I've started treating documentation as a small responsibility. To myself, first, because I forget more than I'd like to admit. And to whoever comes after me, who might one day want to know what I was like at twenty-six and will have more than eleven photographs to go on." },
+      { h: "", p: "Because I got opportunities my parents would have done almost anything for. I live a life I could not have described to myself at eighteen. I'm aware of how much of that is luck and how much of it is other people's sacrifice, and I don't want it to pass through undocumented." },
+      { h: "", p: "None of that means it was easy. The learning curve of your twenties is brutal in a way nobody prepares you for. Nothing is scheduled anymore. There's no next grade to move up to. You find out that most of the people you assumed had it figured out are also guessing, which is comforting for about a week and then isn't." },
+      { h: "", p: "What helped me most was the internet. The communities I found there showed me what other people were quietly dealing with, which made my own version feel less like a personal failure. They also showed me doors I didn't know were there. Careers I'd never heard of, ways to grow past what I started with, people who had gone first and were willing to say how." },
+      { h: "", p: "That's most of why I share any of this." },
+      { h: "", p: "If something I post makes one person feel less alone in a hard year of their twenties, or shows them a door, then I think it's worth the small awkwardness of documenting my life in public." },
+      { h: "", p: "And if all it ever does is give my kids forty minutes of stories to sit through, that's fine too." },
     ]},
   };
   openDetail = (key) => {
@@ -385,7 +416,6 @@ class Component extends DCLogic {
       openPost1: () => this.openDetail('post1'),
       openPost2: () => this.openDetail('post2'),
       openPost3: () => this.openDetail('post3'),
-      openPost4: () => this.openDetail('post4'),
       showMetaRow: this.props.showMetaRow ?? true,
       showYearOverlays: this.props.showYearOverlays ?? true,
       navPillStyle: {
