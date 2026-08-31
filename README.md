@@ -24,8 +24,14 @@ The rolling social numbers on the media kit are **managed data**, not hand-typed
 
 The weekly refresh: pull live IG/TikTok numbers → update `stats/stats.json` → run `apply_stats.py` → deploy.
 
-**Editorial numbers are NOT auto-managed** — the 171K single-post hero, FYP %, non-follower %, and
-follower-growth figures come from native app analytics and are edited by hand in `content.html`.
+Follower counts and 30-day follower growth are managed here too (`ig_followers`, `tt_followers`,
+`tt_growth_30d`). Follower counts appear in **two** places — the hero pills near the top of
+`content.html` and the Platforms & Analytics section lower down — so hand-editing reliably missed
+one. Both spots now share the same `data-stat` key and `apply_stats.py` keeps them in sync.
+
+**Editorial numbers are NOT auto-managed** — the 171K single-post hero, FYP %, and non-follower %
+come from native app analytics and are edited by hand in `content.html`. The "Top posts · last 30
+days" captions are hand-edited too.
 
 ## Deploy
 Hosted on Netlify, connected to this repo — every push auto-deploys. Custom domain: simranmistry.com.
