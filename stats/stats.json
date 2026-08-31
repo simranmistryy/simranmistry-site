@@ -1,5 +1,5 @@
 {
-  "_comment": "Auto-updated social stats. The weekly refresh writes new values here, then apply_stats.py pushes them into the HTML. Editorial/native numbers (171K hero, FYP %, non-follower %, growth) are NOT managed here — edit those by hand in content.html.",
+  "_comment": "Auto-updated social stats. The weekly refresh writes new values here, then apply_stats.py pushes them into the HTML. Follower counts and 30-day growth are now managed here too (they appear in more than one place on the page, so hand-editing missed spots). Still NOT managed: the 171K hero post, FYP %, and non-follower % — those come from native app analytics; edit by hand in content.html.",
   "updated": "2026-08-28",
   "updated_label": "Updated August 2026",
   "values": {
@@ -9,6 +9,9 @@
     "ig_engagements_30d": "2.1K",
     "ig_reach_30d": "30.0K",
     "tt_engagements_30d": "908",
-    "tt_profile_views_30d": "1.1K"
+    "tt_profile_views_30d": "1.1K",
+    "ig_followers": "3,100",
+    "tt_followers": "403",
+    "tt_growth_30d": "+13.5%"
   }
 }
