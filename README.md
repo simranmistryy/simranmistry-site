@@ -19,19 +19,19 @@ Edit the relevant `*.html` file directly, or ask Claude to do it. A few times a 
 ## Auto-updating stats (social analytics)
 The rolling social numbers on the media kit are **managed data**, not hand-typed:
 - Current values live in `stats/stats.json`.
-- Each number on the page is wrapped like `<span data-stat="ig_views_30d">28.4K</span>`.
+- Each number on the page is wrapped like `<span data-stat="ig_followers">3,352</span>`.
 - `python3 stats/apply_stats.py` pushes `stats.json` values into every page (idempotent).
 
 The weekly refresh: pull live IG/TikTok numbers → update `stats/stats.json` → run `apply_stats.py` → deploy.
 
-Follower counts and 30-day follower growth are managed here too (`ig_followers`, `tt_followers`,
-`tt_growth_30d`). Follower counts appear in **two** places — the hero pills near the top of
-`content.html` and the Platforms & Analytics section lower down — so hand-editing reliably missed
-one. Both spots now share the same `data-stat` key and `apply_stats.py` keeps them in sync.
+Managed keys are `ig_followers`, `tt_followers`, and `er_ig` (average IG engagement rate by reach).
+Follower counts appear in **two** places — the hero pills near the top of `content.html` and the
+Platforms & Analytics section lower down — so both share the same `data-stat` key and
+`apply_stats.py` keeps them in sync.
 
-**Editorial numbers are NOT auto-managed** — the 171K single-post hero, FYP %, and non-follower %
-come from native app analytics and are edited by hand in `content.html`. The "Top posts · last 30
-days" captions are hand-edited too.
+**Editorial numbers are NOT auto-managed** — the TikTok and Instagram best-post heroes, FYP %,
+all-time highlight cards, and "Top posts" captions come from native app analytics and are edited
+by hand in `content.html`.
 
 ## Deploy
 Hosted on Netlify, connected to this repo — every push auto-deploys. Custom domain: simranmistry.com.

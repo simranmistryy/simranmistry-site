@@ -3,7 +3,7 @@
 apply_stats.py — pushes values from stats.json into the site HTML.
 
 Every auto-updated number on the site is wrapped like:
-    <span data-stat="ig_views_30d">28.4K</span>
+    <span data-stat="ig_followers">3,352</span>
 This script rewrites the text inside each such span to match stats.json.
 It is idempotent: running it twice produces the same result.
 

@@ -1,17 +1,10 @@
 {
-  "_comment": "Auto-updated social stats. The weekly refresh writes new values here, then apply_stats.py pushes them into the HTML. Follower counts and 30-day growth are now managed here too (they appear in more than one place on the page, so hand-editing missed spots). Still NOT managed: the 171K hero post, FYP %, and non-follower % — those come from native app analytics; edit by hand in content.html.",
-  "updated": "2026-08-28",
-  "updated_label": "Updated August 2026",
+  "_comment": "Auto-updated social stats. The weekly refresh writes new values here, then apply_stats.py pushes them into the HTML. Follower counts appear in the hero pills and Platforms & Analytics, so both share a data-stat key. The IG engagement rate is managed here too. Editorial numbers are hand-edited in content.html: the TikTok and Instagram best-post heroes, FYP %, all-time highlight cards, and Top posts captions.",
+  "updated": "2026-11-16",
+  "updated_label": "Updated November 2026",
   "values": {
-    "er_ig": "7.0%",
-    "er_tt": "12.4%",
-    "ig_views_30d": "79.8K",
-    "ig_engagements_30d": "2.1K",
-    "ig_reach_30d": "30.0K",
-    "tt_engagements_30d": "908",
-    "tt_profile_views_30d": "1.1K",
-    "ig_followers": "3,100",
-    "tt_followers": "403",
-    "tt_growth_30d": "+13.5%"
+    "er_ig": "7.6%",
+    "ig_followers": "3,352",
+    "tt_followers": "562"
   }
 }
